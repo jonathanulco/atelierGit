@@ -116,11 +116,11 @@ $ git status
 					<h1>Git Add</h1>
 					<pre>
 						<code class="hljs">
-// Suivre un fichier créé ou modifié
+// Indexer / Suivre un fichier créé ou modifié
 $ git add nom_du_fichier
-// Suivre tous les fichiers nouvellement créés ou modifiés
+// Indexer / Suivre tous les fichiers nouvellement créés ou modifiés
 $ git add .
-// Suivre tous les fichiers nouvellement créés ou modifiés et effacés ceux qui sont à effacer.
+// Indexer / Suivre tous les fichiers nouvellement créés ou modifiés et effacés ceux qui sont à effacer.
 $ git add -A
 						</code>
 					</pre>
@@ -128,6 +128,10 @@ $ git add -A
 				<section>
 					<h1>.gitignore</h1>
 					<p>Ignorer des fichiers et des répertoires</p>
+// Définir les fichiers à ignorer
+$ nano .gitignore
+// Si le fichier à déjà été suivi ou indexé
+$ git rm --cached /fichier-à-ignorer					
 				</section>
 				<section>
 					<h1>Git commit : Le snapshot</h1>
@@ -135,7 +139,8 @@ $ git add -A
 						<code class="hljs">
 $ git commit --message 'Un message indiquant vos modifications'
 $ git commit -m 'message'
-
+// En cas de message mal formulé
+$ git commit --amend
 						</code>
 					</pre>
 				</section>
