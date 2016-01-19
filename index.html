@@ -80,11 +80,25 @@
 					<h1>Débuter</h1>
 					<pre>
 						<code class="hljs">
-mkdir new-project
-cd new-project
-git init
+$ mkdir new-project
+$ cd new-project
+$ git init
 						</code>
 					</pre>	
+				</section>
+				<section>
+					<h1>Git Config</h1>
+					<p>Personnaliser son environnement</p>
+					<pre>
+						<code class="hljs">
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+// choisir un éditeur de texte
+$ git config --global core.editor emacs
+// choisir un outil de merge
+$ git config --global merge.tool meld
+						</code>	
+					</pre>
 				</section>
 				<section>
 					<h1 class="title">Commit</h1>
@@ -94,7 +108,7 @@ git init
 					<pre>
 						<code class="hljs">
 // Vérifier l'état des fichiers
-git status
+$ git status
 						</code>
 					</pre>
 				</section>	
@@ -103,20 +117,24 @@ git status
 					<pre>
 						<code class="hljs">
 // Suivre un fichier créé ou modifié
-git add nom_du_fichier
+$ git add nom_du_fichier
 // Suivre tous les fichiers nouvellement créés ou modifiés
-git add .
+$ git add .
 // Suivre tous les fichiers nouvellement créés ou modifiés et effacés ceux qui sont à effacer.
-git add -A
+$ git add -A
 						</code>
 					</pre>
+				</section>
+				<section>
+					<h1>.gitignore</h1>
+					<p>Ignorer des fichiers et des répertoires</p>
 				</section>
 				<section>
 					<h1>Git commit : Le snapshot</h1>
 					<pre>
 						<code class="hljs">
-git commit --message 'Un message indiquant vos modifications'
-git commit -m 'message'
+$ git commit --message 'Un message indiquant vos modifications'
+$ git commit -m 'message'
 
 						</code>
 					</pre>
@@ -126,7 +144,7 @@ git commit -m 'message'
 					<p>visualiser tous les commits</p>
 					<pre>
 						<code class="hljs">
-git log
+$ git log
 
 						</code>
 					</pre>
@@ -136,8 +154,8 @@ git log
 					<p>visualiser mes changements</p>
 					<pre>
 						<code class="hljs">
-git diff
-git diff un_fichier_particulier
+$ git diff
+$ git diff un_fichier_particulier
 
 						</code>
 					</pre>
@@ -151,7 +169,8 @@ git diff un_fichier_particulier
 				<section>
 					<pre>
 						<code class="hljs">
-git branch ma-nouvelle-fonctionnalité
+// créer une branche							
+$ git branch ma-nouvelle-fonctionnalité
 						</code>
 					</pre>
 					<p><img src="img/branch-dsm.png" alt=""></p>
@@ -160,11 +179,11 @@ git branch ma-nouvelle-fonctionnalité
 					<pre>
 						<code class="hljs">
 // créer une branche puis passer sur cette branche							
-git branch ma-nouvelle-fonctionnalité
+$ git branch ma-nouvelle-fonctionnalité
 git checkout ma-nouvelle-fonctionnalité
 
 // ou directement
-git checkout -b ma-nouvelle-fonctionnalité
+$ git checkout -b ma-nouvelle-fonctionnalité
 						</code>
 					</pre>	
 				</section>
@@ -179,21 +198,35 @@ git checkout -b ma-nouvelle-fonctionnalité
 					<pre>
 						<code class="hljs">
 // Retourner sur la branch master						
-git checkout master
+$ git checkout master
 // Voir les différences entres les deux branches
-git diff master..ma-nouvelle-fonctionnalité
+$ git diff master..ma-nouvelle-fonctionnalité
 // Merger les deux branches 
-git merge ma-nouvelle-fonctionnalité
+$ git merge ma-nouvelle-fonctionnalité
 // Suivre le merge
-git add -A
+$ git add -A
 // Nettoyer l'historique en effaçant la branche de la fonctionnalité
-git branch -d ma-nouvelle-fonctionnalité
+$ git branch -d ma-nouvelle-fonctionnalité
 						</code>
 					</pre>
 				</section>
 				<section>
 					<h1>Remote</h1>
 				</section>						
+				<section>
+					<h1>Pull & Push</h1>
+					<p> Jamais l'inverse !!! </p>
+				</section>
+				<section>
+					<h1>Help</h1>
+					<pre>
+						<code class="hljs">
+$ git help /verbe/
+$ git /verbe/ --help
+$ man git-/verbe/	
+						</code>
+					</pre>				
+				</section>	
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
