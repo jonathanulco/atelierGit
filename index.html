@@ -61,9 +61,9 @@
 
 				<section>
 					<h1>Installation de GIT</h1>
-					<p class="fragment">Windows : <a href="">Insérer ici un lien vers un client windows</a></p>
-					<p class="fragment">Mac : <a href="">Insérer ici un lien vers un client Mac</a></p>
-					<p class="fragment">Linux intégrer de base. Sur debian ubuntu il demande une maj manuelle vers la version 2.0. Sur fedora c'est déjà en 2.0.</p>
+					<p class="fragment">Windows : <a href="https://git-for-windows.github.io/">git for windows/</a> + <a href="https://www.sourcetreeapp.com/">sourcetree app/</a></p>
+					<p class="fragment">Mac : <a href="http://brew.sh/">Homebrew</a> + <a href="https://www.sourcetreeapp.com/">sourcetree app/</a></p></p>
+					<p class="fragment">Linux souvent intégré de base.</p>
 				</section>
 
 				<section>
@@ -116,11 +116,11 @@ $ git status
 					<h1>Git Add</h1>
 					<pre>
 						<code class="hljs">
-// Indexer / Suivre un fichier créé ou modifié
+// Indexer (Suivre) un fichier créé ou modifié
 $ git add nom_du_fichier
-// Indexer / Suivre tous les fichiers nouvellement créés ou modifiés
+// Indexer tous les fichiers nouvellement créés ou modifiés
 $ git add .
-// Indexer / Suivre tous les fichiers nouvellement créés ou modifiés et effacés ceux qui sont à effacer.
+// Indexer tous les fichiers nouvellement créés ou modifiés et effacés ceux qui sont à effacer.
 $ git add -A
 						</code>
 					</pre>
@@ -128,10 +128,14 @@ $ git add -A
 				<section>
 					<h1>.gitignore</h1>
 					<p>Ignorer des fichiers et des répertoires</p>
+					<pre>
+						<code class="hljs">
 // Définir les fichiers à ignorer
 $ nano .gitignore
 // Si le fichier à déjà été suivi ou indexé
-$ git rm --cached /fichier-à-ignorer					
+$ git rm --cached #fichier-à-ignorer					
+						</code>
+					</pre>
 				</section>
 				<section>
 					<h1>Git commit : Le snapshot</h1>
