@@ -155,6 +155,35 @@ $ git log
 					</pre>
 				</section>
 				<section>
+					<h1>Convention de commit</h1>
+					<pre>
+						<code class="hljs">
+type (scope): subject
+#BLANK LINE
+body
+#BLANK LINE
+footer
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h1>Convention de commit : type</h1>
+					<pre>
+						<code class="hljs">
+
+feat: A new feature
+fix: A bug fix
+docs: Documentation only changes
+style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+refactor: A code change that neither fixes a bug nor adds a feature
+perf: A code change that improves performance
+test: Adding missing tests
+chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+						</code>
+					</pre>
+				</section>
+				<section>
 					<h1>Git diff</h1>
 					<p>visualiser mes changements</p>
 					<pre>
@@ -215,6 +244,53 @@ $ git branch -d ma-nouvelle-fonctionnalité
 						</code>
 					</pre>
 				</section>
+				<section>
+					<h1>Git Rebase</h1>
+					<p>Ou comment avoir un historique propre</p>
+				</section>
+				<section>
+					<h2>Un historique sale</h2>
+					<section>
+						<img src="img/historique-flow-dirty.png" alt="">
+					</section>
+					<section>
+						<h2>Master évolue</h2>
+					</section>
+					<section>
+						<p><img src="img/historique-flow-dirty-2.png" alt=""></p>
+					</section>
+					<section>
+						<p><img src="img/historique-flow-dirty-3.png" alt=""></p>
+					</section>
+					<section>
+						<p><img src="img/historique-flow-dirty-4.png" alt=""></p>
+					</section>
+					<section>
+						<p><img src="img/historique-flow-dirty-5.png" alt=""></p>
+					</section>
+					<section>
+						<p><img src="img/historique-flow-dirty-6.png" alt=""></p>
+					</section>
+				</section>
+				<section>
+					<h1>Avoir un historique propre avec git rebase</h1>
+					<section>
+						<h2>Master évolue</h2>
+					</section>
+					<section>
+						<p><img src="img/historique-flow-dirty-2.png" alt=""></p>
+					</section>
+					<section>
+						<p><img src="img/historique-flow-clean-1.png" alt=""></p>
+					</section>
+					<section>
+						<p><img src="img/historique-flow-clean-2.png" alt=""></p>
+					</section>
+				</section>
+				<section>
+					<h1>ATTENTION REBASE NE CONCERNE QUE LES BRANCHES FEATURE JAMAIS REBASE !</h1>
+				</section>
+
 				<section>
 					<h1>Les dépôts distants</h1>
 				</section>
